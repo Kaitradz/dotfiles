@@ -1,92 +1,92 @@
-## Simple Hyprland Setup
+# 🚀 Kaitradz's CachyOS + Hyprland Dotfiles
 
-Showcase & Guides: https://www.youtube.com/@43PR2
-
-Simple Hyprland setup focused on practical keybinds, productivity, and a smooth workflow easy to customize
-
-Feel free to use as inspiration or as a starting point for building your own setup.
-
-![](Wallpapers/Showcase/1.png)
-![](Wallpapers/Showcase/2.png)
-![](Wallpapers/Showcase/3.png)
-![](Wallpapers/Showcase/4.png)
-
-Wallpapers: https://wallhaven.cc/user/43pr
-
-## Features
-
-* Waybar > Change volume with mouse wheel, mute, play/pause, next and blue light filter
-* Rofi > App search, clipboard history and switch opacity
-* Hyprlock (Lock screen)
-* Wlogout (Logout menu)
-* Custom scripts
-* Custom monochrome theme
-* Custom wallpaper selector (Quickshell)
-* Spotify + Spicetify. Theme: text by darkthemer (edited)
-
-### Wallpaper Selector
-
-> Inspired by [hyprquickpaper](https://github.com/iamsurjog/hyprquickpaper)
-
-### Most used keybinds
-
-> **You can modify the keybinds using HyprMod**
-
-| Keybind                 | Action                    |
-| -----------             | ------------------------- |
-| `Super + T`             | Terminal                  |
-| `Super + Q`             | Close active window       |
-| `Super + 1, 2, 3..`     | Change workspaces         |
-| `Super + Shift + 1, 2..`| Move window to workspace  |
-| `Super + D`             | Application launcher      |
-| `Super + E`             | File manager              |
-| `Super + B`             | Browser                   |
-| `Super + W`             | Wallpaper selector        |
-| `Super + O`             | Switch opacity            |
-| `Super + V`             | Clipboard history         |          
-| `Super + F`             | Toggle fullscreen         |
-| `Super + Space`         | Toggle floating window    |
-| `Super + Shift + W`     | Toggle waybar             |
-| `Super + Tab`           | Lock screen               |
-| `Super + Grave`         | Logout menu               |
-| `Super + Mouse wheel`   | Zoom                      |
-
-> **All keybinds: config/hypr/keybinds.lua**
+A fully automated, production-ready Hyprland desktop environment configured with **Lua**, **Caelestia Shell**, and custom aesthetics.
 
 ---
-## Installation 
 
-> **READ ALL**
+## 💻 System Specs & Environment
 
-Should work for Arch, Manjaro, EndeavourOS, CachyOS, etc. Let me know if there's any issues
+* **OS:** CachyOS (Arch-based)
+* **Window Manager:** Hyprland (Lua Configuration)
+* **Shell & Bar:** Caelestia Shell (`quickshell -c caelestia`)
+* **Terminal:** Kitty
+* **File Manager:** Dolphin
+* **Browser:** Brave
+* **Aesthetics:** Custom Gaps, Rounding (8px), Blur Effects, and CRT Screen Shader
 
-**First install git then clone the repository and run the installer:**
+---
+
+## 📥 Quick Installation
+
+To replicate this exact setup on your system, open your terminal and run:
 
 ```bash
-
-sudo pacman -S git   
-```
-```bash
-
-git clone https://github.com/43PR/dotfiles.git
-cd dotfiles
+git clone [https://github.com/Kaitradz/dotfiles.git](https://github.com/Kaitradz/dotfiles.git) ~/dotfiles
+cd ~/dotfiles
 chmod +x install.sh
 ./install.sh
+
 ```
 
-> **After the installation finishes log out and back in.**
-
-Existing configuration files that are being replaced will be backed up automatically.
-
-Edit default programs in "config/hypr/hyprland.lua".
-
-Any issues with the wallpaper picker just delete cache pictures ".cache/quickshell/thumbs/"
-
-**☕ Support: https://ko-fi.com/43pr2**
+> **Note:** The installer automatically creates a timestamped backup of your existing `~/.config` folder in `~/.config-backups/` before applying these dotfiles.
 
 ---
 
-* [hyprquickpaper](https://github.com/iamsurjog/hyprquickpaper)
-* [samaritan-sddm-theme](https://github.com/omerwk/samaritan-sddm-theme)
+## ⌨️ Keybindings & Controls
 
+### 🚀 Applications & Launchers
 
+| Shortcut | Action |
+| --- | --- |
+| `SUPER` + `T` | Open Kitty Terminal |
+| `SUPER` + `D` | Open Rofi Application Launcher |
+| `SUPER` + `E` | Open Dolphin File Manager |
+| `SUPER` + `B` | Open Brave Web Browser |
+| `SUPER` + `C` | Open GNOME Calculator |
+| `SUPER` + `Return` | Open GNOME Text Editor |
+
+---
+
+### 🪟 Window Management
+
+| Shortcut | Action |
+| --- | --- |
+| `SUPER` + `Q` | Close Active Window |
+| `SUPER` + `F` | Toggle Fullscreen |
+| `SUPER` + `Space` | Toggle Floating Mode (Auto-Centered & Resized) |
+| `SUPER` + `H` / `J` / `K` / `L` | Focus Window (Left / Down / Up / Right) |
+| `SUPER` + `SHIFT` + `H` / `J` / `K` / `L` | Move Active Window Position |
+| `SUPER` + `CTRL` + `H` / `J` / `K` / `L` | Resize Active Window |
+| `SUPER` + `1` – `0` | Switch Workspace 1–10 |
+| `SUPER` + `SHIFT` + `1` – `0` | Move Window to Workspace 1–10 |
+
+---
+
+### 🛠 System, Shell & Utilities
+
+| Shortcut | Action |
+| --- | --- |
+| `Delete` | Region Screenshot to Clipboard (`hyprshot`) |
+| `SUPER` + `SHIFT` + `S` | Toggle CRT Screen Shader (`crt.glsl`) |
+| `SUPER` + `O` | Run Opacity Script |
+| `SUPER` + `GRAVE` (`~`) | Toggle Caelestia Session Drawer |
+| `SUPER` + `SHIFT` + `W` | Toggle Caelestia Shell Bar |
+| `SUPER` + `V` | Open Clipboard History (Rofi + Cliphist) |
+| `SUPER` + `W` | Open Waypaper (Wallpaper Manager) |
+| `SUPER` + `R` | Toggle GPU Screen Recorder |
+| `SUPER` + `X` | Switch Keyboard Layout (`us` / `latam`) |
+| `SUPER` + `TAB` | Lock Session |
+| `SUPER` + `SHIFT` + `E` | Exit Hyprland |
+
+---
+
+## 🔧 Features & System Tweaks
+
+* **Lua Config Architecture:** Modular configuration split into `monitors.lua`, `keybinds.lua`, `rules.lua`, and `hyprland-gui.lua`.
+* **Caelestia Shell Integration:** Replaces default Waybar setups to prevent top-bar overlapping issues.
+* **Auto-Centered Floating Rules:** Pre-configured floating and sizing rules for `Pavucontrol`, `Waypaper`, `GNOME Calculator`, and file pickers.
+* **Smart Audio & Media Handling:** Dedicated keys for PipeWire volume control (`wpctl`), brightness (`brightnessctl`), and media playback (`playerctl`).
+
+```
+
+```
