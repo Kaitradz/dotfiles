@@ -145,7 +145,7 @@ local crt_active = false
 hl.bind("SUPER + SHIFT + S", function()
     crt_active = not crt_active
     if crt_active then
-        hl.config({ ["decoration.screen_shader"] = "/home/ayman/.config/hypr/shaders/crt.glsl" })
+        hl.config({ ["decoration.screen_shader"] = "$HOME/.config/hypr/shaders/crt.glsl" })
     else
         hl.config({ ["decoration.screen_shader"] = "" })
     end
