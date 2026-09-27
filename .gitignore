@@ -1,0 +1,7 @@
+*.log
+*.tmp
+.cache/
+__pycache__/
+*.bak
+*.save
+*~
